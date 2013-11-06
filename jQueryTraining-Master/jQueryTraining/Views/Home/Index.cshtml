@@ -1,4 +1,4 @@
-﻿@model jQueryTraining.Models.IndexModel 
+﻿@model jQueryTraining.Models.IndexModel
 @{
     Layout = null;
 }
@@ -9,8 +9,6 @@
     <title></title>
     <link href="~/Content/normalise.css" rel="stylesheet" />
     <link href="~/Content/Site.css" rel="stylesheet" />
-    <style>
-    </style>
 </head>
 <body>
     <form id="frmContact" method="post">
@@ -40,5 +38,13 @@
             <input type="submit" value="Submit" id="btnSubmit" />
         </fieldset>
     </form>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="~/Scripts/HomeIndex.js"></script>
+    <script>
+        $(function () {
+            HomeIndex.Init();
+        });
+    </script>
+
 </body>
 </html>
