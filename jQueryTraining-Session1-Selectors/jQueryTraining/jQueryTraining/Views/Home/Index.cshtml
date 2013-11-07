@@ -1,0 +1,50 @@
+﻿@model jQueryTraining.Models.IndexModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="~/Content/normalise.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="frmContact" method="post">
+        <fieldset>
+            <legend>Our Form</legend>
+            <div class="validation-summary"></div>
+            <label for="firstName">First Name</label>
+            <input id="firstName" name="firstName" type="text" value="@Model.firstName" />
+            <br />
+            <label for="lastName">Last Name</label>
+            <input id="lastName" name="lastName" type="text" value="@Model.lastName" />
+            <br />
+            <label for="emailAddress">Email Address</label>
+            <input id="emailAddress" name="emailAddress" type="text" value="@Model.emailAddress" />
+            <br />
+            <label for="">Email Type</label>
+            <select id="slType" name="slType">
+                <option value="">Select Type</option>
+                <option value="1">Type 1</option>
+                <option value="2">Type 2</option>
+            </select>
+            <br />
+            <label for="acceptTerms">I accept:</label>
+            <input id="acceptTerms" name="acceptTerms" type="checkbox" value="AcceptedTerms" />
+            <br />
+            <label></label>
+            <input type="submit" value="Submit" id="btnSubmit" />
+        </fieldset>
+    </form>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="~/Scripts/HomeIndex.js"></script>
+    <script>
+        $(function () {
+            HomeIndex.Init();
+        });
+    </script>
+
+</body>
+</html>
