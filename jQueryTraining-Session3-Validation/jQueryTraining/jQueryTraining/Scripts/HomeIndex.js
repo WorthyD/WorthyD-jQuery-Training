@@ -19,12 +19,8 @@
         });
     },
     Valid: function (frm) {
-        var invalidElms = $('');
+        var invalidElms = [];
         var invalidMSG = [];
-
-        frm.find('input').removeClass('invalid');
-
-        console.log(invalidElms);
 
         //Fist Name
         var fName = frm.find('#firstName'),
@@ -42,7 +38,7 @@
         }
 
         if (invalidFName) {
-            invalidElms = invalidElms.add(fName);
+            invalidElms.push(fName);
         }
 
 
@@ -62,7 +58,7 @@
         }
 
         if (invalidLName) {
-            invalidElms = invalidElms.add(lName);
+            invalidElms.push(lName);
         }
 
         //Email
@@ -87,7 +83,7 @@
         }
 
         if (invalidEmail) {
-            invalidElms = invalidElms.add(emailAddress);
+            invalidElms.push(emailAddress);
         }
 
 
@@ -97,22 +93,19 @@
             slTyevalue = slType.val();
 
         if (slTyevalue === '') {
-            invalidElms = invalidElms.add(slType);
+            invalidElms.push(slType);
             invalidMSG.push('Please select a type');
         }
 
         //Terms
         var chkTerms = frm.find('#acceptTerms');
         if (!chkTerms.is(':checked')) {
-            invalidElms = invalidElms.add(chkTerms);
-            //add
+            invalidElms.push(chkTerms);
             invalidMSG.push('Please accept the terms');
         }
 
-        $('.validation-summary').html('<ul><li>' + invalidMSG.join('</li><li>') + '</li></ul>');
-        invalidElms.addClass('invalid');
-
-
+        console.log(invalidMSG);
         console.log(invalidElms);
+
     }
 }

@@ -31,7 +31,3 @@ form {
     form br {
         clear: both;
     }
-
-    form .invalid {
-        border:1px solid red;
-    }
