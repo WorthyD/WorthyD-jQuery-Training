@@ -10,9 +10,10 @@ namespace jQueryTraining.Controllers {
             Models.IndexModel model = new Models.IndexModel();
             return View(model);
         }
+
         [HttpPost]
         public ActionResult Index(Models.IndexModel postModel) {
-
+            postModel.FormPostMessage = "Your form posted";
             return View(postModel);
         }
 

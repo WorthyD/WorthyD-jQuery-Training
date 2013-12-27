@@ -12,5 +12,6 @@ namespace jQueryTraining.Models
         public string emailAddress { get; set; }
         public string slType { get; set; }
         public string acceptTerms { get; set; }
+        public string FormPostMessage { get; set; }
     }
 }

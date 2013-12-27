@@ -16,7 +16,7 @@ namespace jQueryTraining.Controllers
         [HttpPost]
         public ActionResult Index(Models.IndexModel postModel)
         {
-
+            postModel.FormPostMessage = "Your form posted";
             return View(postModel);
         }
 
