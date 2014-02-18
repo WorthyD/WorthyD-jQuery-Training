@@ -1,0 +1,70 @@
+  ol, ul {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        input {
+            width: 50px;
+        }
+        /*elimnates bullets */ .imagecontainer {
+            float: left;
+            width: 25px;
+        }
+
+        .storyTitle {
+            float: left;
+            width: 150px;
+            margin-left: 25px;
+        }
+
+        .storyDesc {
+            float: left;
+            width: 250px;
+            margin-left: 25px;
+        }
+
+        .storyRank {
+            float: left;
+            width: 75px;
+            margin-left: 25px;
+        }
+        .controls {
+            float:left;
+            width:50px;
+        }
+        /**/ .storyListBox {
+            float: left;
+        }
+
+        .move {
+            float: left;
+        }
+
+        .photolistitem {
+            background-color: #ffffff;
+            float: left;
+        }
+
+        .photolistitemHeader {
+            float: left;
+            border-bottom: solid 1px black;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+
+        .photolistitem,
+        .photolistitemHeader {
+            position: relative;
+            padding: 10px;
+            vertical-align: middle;
+            width: 650px;
+            clear: both;
+        }
+
+
+
+        #ulThumbnailList {
+            cursor: pointer;
+        }

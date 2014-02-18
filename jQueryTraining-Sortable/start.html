@@ -1,0 +1,92 @@
+<html>
+<head>
+    <title>Test</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body style="width: 800px; margin: 100px auto;">
+    <ul>
+        <li class="photolistitemHeader" style="">
+            <div class="imagecontainer">
+                &nbsp;
+            </div>
+          
+            <div class="storyTitle ">
+                Story Title
+            </div>
+            <div class="storyDesc ">
+                Story Description
+            </div>
+            <div class="storyRank ">
+                 Order
+            </div>
+        </li>
+
+    </ul>
+    <ul id="ulThumbnailList">
+
+        <li data-storyid="2" class="photolistitem">
+            <div class="storyListBox">
+                <div class="imagecontainer"><img src="dragdropicon.gif" alt=""></div>
+                <div class="storyTitle">Lord of the Rings</div>
+                <div class="storyDesc">About about a ring</div>
+                <div class="storyRank">1</div>
+                <div class="controls"><a href="#">Edit</a></div>
+            </div>
+        </li>
+        <li data-storyid="3" class="photolistitem">
+            <div class="storyListBox">
+                <div class="imagecontainer"><img src="dragdropicon.gif" alt=""></div>
+                <div class="storyTitle">Harry Potter</div>
+                <div class="storyDesc">Some Wizards</div>
+                <div class="storyRank">2</div>
+                <div class="controls"><a href="#">Edit</a></div>
+            </div>
+        </li>
+        <li data-storyid="4" class="photolistitem">
+            <div class="storyListBox">
+                <div class="imagecontainer"><img src="dragdropicon.gif" alt=""></div>
+                <div class="storyTitle">Hunger Games</div>
+                <div class="storyDesc">Some people fight in an arena</div>
+                <div class="storyRank">3</div>
+                <div class="controls"><a href="#">Edit</a></div>
+            </div>
+        </li>
+        <li data-storyid="5" class="photolistitem">
+            <div class="storyListBox">
+                <div class="imagecontainer"><img src="dragdropicon.gif" alt=""></div>
+                <div class="storyTitle">Twilight</div>
+                <div class="storyDesc">Fake vampires who rolled in glitter</div>
+                <div class="storyRank">4</div>
+                <div class="controls"><a href="#">Edit</a></div>
+            </div>
+        </li>
+        <li data-storyid="6" class="photolistitem">
+            <div class="storyListBox">
+                <div class="imagecontainer"><img src="dragdropicon.gif" alt=""></div>
+                <div class="storyTitle">Ranger's Apprentice</div>
+                <div class="storyDesc">Kid in a cloak with a bow</div>
+                <div class="storyRank">5</div>
+                <div class="controls"><a href="#">Edit</a></div>
+            </div>
+        </li>
+    </ul>
+
+    <div style="clear:both">
+        <input type="button" value="Save" />
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#ulThumbnailList").sortable({
+                opacity: 0.7,
+                revert: true,
+                scroll: true,
+                handle: $(".imagecontainer").add(".imagecontainer a img"),
+                update: function () {  $('.savelabel').hide() }
+            });
+        })
+    </script>
+</body>
+</html>
