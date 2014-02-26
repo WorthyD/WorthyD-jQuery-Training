@@ -5,7 +5,7 @@
 </head>
 <body style="width: 800px; margin: 100px auto;">
     <ul>
-        <li class="photolistitemHeader" style="">
+        <li class="sortlistitemHeader" style="">
             <div class="imagecontainer">
                 &nbsp;
             </div>
@@ -24,7 +24,7 @@
     </ul>
     <ul id="ulThumbnailList">
 
-        <li data-storyid="2" class="photolistitem">
+        <li data-storyid="1" class="sortlistitem">
             <div class="storyListBox">
                 <div class="imagecontainer"><img src="dragdropicon.gif" alt=""></div>
                 <div class="storyTitle">Lord of the Rings</div>
@@ -33,7 +33,7 @@
                 <div class="controls"><a href="#">Edit</a></div>
             </div>
         </li>
-        <li data-storyid="3" class="photolistitem">
+        <li data-storyid="2" class="sortlistitem">
             <div class="storyListBox">
                 <div class="imagecontainer"><img src="dragdropicon.gif" alt=""></div>
                 <div class="storyTitle">Harry Potter</div>
@@ -42,7 +42,7 @@
                 <div class="controls"><a href="#">Edit</a></div>
             </div>
         </li>
-        <li data-storyid="4" class="photolistitem">
+        <li data-storyid="3" class="sortlistitem">
             <div class="storyListBox">
                 <div class="imagecontainer"><img src="dragdropicon.gif" alt=""></div>
                 <div class="storyTitle">Hunger Games</div>
@@ -51,7 +51,7 @@
                 <div class="controls"><a href="#">Edit</a></div>
             </div>
         </li>
-        <li data-storyid="5" class="photolistitem">
+        <li data-storyid="4" class="sortlistitem">
             <div class="storyListBox">
                 <div class="imagecontainer"><img src="dragdropicon.gif" alt=""></div>
                 <div class="storyTitle">Twilight</div>
@@ -60,7 +60,7 @@
                 <div class="controls"><a href="#">Edit</a></div>
             </div>
         </li>
-        <li data-storyid="6" class="photolistitem">
+        <li data-storyid="5" class="sortlistitem">
             <div class="storyListBox">
                 <div class="imagecontainer"><img src="dragdropicon.gif" alt=""></div>
                 <div class="storyTitle">Ranger's Apprentice</div>
@@ -87,7 +87,19 @@
                 handle: $(".imagecontainer img"),
                 update: function () {  $('#btnSave').show() }
             });
+        $('#btnSave').on('click', function(){
+            var items = $(".sortlistitem");
+            var itemIds = [];
+
+            for (var x = 0; x < items.length; x++) {
+                itemIds.push(items.eq(x).data('storyid'));
+            }
+
+            var parms = { "stories": itemIds.join(',') };
+            alert(itemIds.join(',')); 
+        });
         })
+
     </script>
 </body>
 </html>

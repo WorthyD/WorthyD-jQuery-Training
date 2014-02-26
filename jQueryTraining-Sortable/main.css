@@ -41,12 +41,13 @@
             float: left;
         }
 
-        .photolistitem {
-            background-color: #ffffff;
+        .sortlistitem {
+            background-color: #e7e7e7;
+            border:1px solid #000;
             float: left;
         }
 
-        .photolistitemHeader {
+        .sortlistitemHeader {
             float: left;
             border-bottom: solid 1px black;
             font-weight: bold;
@@ -54,8 +55,8 @@
         }
 
 
-        .photolistitem,
-        .photolistitemHeader {
+        .sortlistitem,
+        .sortlistitemHeader {
             position: relative;
             padding: 10px;
             vertical-align: middle;
